@@ -5,7 +5,7 @@ const studId = document.getElementById("myStudentId");
 const colorNum = document.getElementById("customNumber");
 const imgDisplayed = document.getElementById("images");
 const imgSelect = document.getElementById("imageSelect");
-const images =["../images/img1.jpg", "../images/img2.jpg", "../images/img3.jpg", "../images/img4.jpg", "../images/img5.jpg"];
+const images =["../images/img1.jpg", "./images/img2.jpg", "./images/img3.jpg", "./images/img4.jpg", "./images/img5.jpg"];
 
 // function to change bg color from user input and add student id
 function changeCustomColor(colorValue) {
