@@ -6,6 +6,7 @@ const colorNum = document.getElementById("customNumber");
 const imgDisplayed = document.getElementById("images");
 const imgSelect = document.getElementById("imageSelect");
 const images =["./images/img1.jpg", "./images/img2.jpg", "./images/img3.jpg", "./images/img4.jpg", "./images/img5.jpg"];
+let called = false;
 
 // function to change bg color from user input and add student id
 function changeCustomColor(colorValue) {
@@ -48,10 +49,7 @@ function addList() {
     
     // Tip: you might have to check length condition so that the list does not keep growing when clicked
     if(imgSelect.childElementCount <5 ){ 
-        //This if statement is checking to see if the other options haven't been generated yet then it deletes the first element
-        if(imgSelect.childElementCount == 1){
-            imgSelect.remove(0);
-        }
+        
         //The for loop generates options element for every element in the images array
         for(let i =0; i <images.length; i++){
             const imgOption = document.createElement("option");
@@ -60,6 +58,8 @@ function addList() {
             imgOption.textContent =  `Image ${imgOption.value}`;
             imgSelect.appendChild(imgOption);
            }
+           
+        
     }
     // Tip: use createElement and appendChild inside every for loop to add elements to select list from array 
     
@@ -67,12 +67,18 @@ function addList() {
 
 // function to change image
 function changeImage() {
+    console.log("you changed the image");
+    // Check if the function is called for the first time and remove the first option
+    if (!called) {
+        imgSelect.remove(0);
+        called = true;
+    }
     
-    //Subtracting 1 from the value to get the index of said image src from the images array
-    let imgIndex = imgSelect.value -1;
-    //Then we can take image index at set it ass the source of the image using the images array
+    // Subtracting 1 from the value to get the index of said image src from the images array
+    let imgIndex = imgSelect.value - 1;
+    // Then we can take image index and set it as the source of the image using the images array
     imgDisplayed.setAttribute("src", images[imgIndex]);
-
+    console.log(`You have selected image ${imgIndex}`);
 }
 
 // event listeners for on click event of buttons and select
