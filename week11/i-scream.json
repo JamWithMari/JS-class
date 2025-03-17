@@ -1,0 +1,14 @@
+// companyName, headOffice, established, active, topFlavors(name, calories, type, ingredients, image
+{
+    "companyName": "JamarIce",
+    "headOffice": "Nice, France",
+    "established": 2002,
+    "active": true,
+    "topFlavors": [{
+        "name": "Chocolate Mint",
+        "calories": 200,
+        "type": "ice cream",
+        "ingredients": ["Milk", "Sugar", "Cocao"]
+
+    }, {},]
+}
