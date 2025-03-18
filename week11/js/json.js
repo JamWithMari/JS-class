@@ -7,7 +7,7 @@ async function populate(){
     // Introducing JavaScript Object Notation (JSON): https://json.org/
     // STEP 4a: Create i-scream.json file with companyName, headOffice, established, active, topFlavors(name, calories, type, ingredients, image) */
     // STEP 4b: Store the URL of a JSON file in a variable */
-    const url = "https://jamwithmari.github.io/JS-class/week11/js/i-scream.json";
+    const url = "https://jamwithmari.github.io/JS-class/week11/i-scream.json";
     // STEP 5: Use the new URL to create a new request object
     const request = new Request(url);
     console.log(request);
@@ -21,7 +21,7 @@ async function populate(){
     // STEP 9a: Invoke the populateHeader function here, then build it below
     populateHeader(responseJson);
     // STEP 10a: Invoke the showTopFlavors function here, then build it below
-    showTopFlavors();
+    showTopFlavors(responseJson);
 }
 
 
@@ -29,14 +29,13 @@ async function populate(){
 // STEP 3b: Call the populate() function
 populate();
 /* STEP 9b: Build out the populateHeader() function */
-function populateHeader(jsBody){
-
+function populateHeader(jsonBody){
     // Create the H1 element
     let h1 = document.createElement("h1");
     let p = document.createElement("p");
     // Grab the company name from the JSON object and use it for the text node
     h1.textContent = jsonBody.companyName;
-    p.textContent = `Head Office: ${jsonBody.headOffice}, est. ${jsBody.established} - Active ${(jsonBody.active) ? "Visit now":"Out of business"}`;
+    p.textContent = `Head Office: ${jsonBody.headOffice}, est. ${jsonBody.established} - Active ${(jsonBody.active) ? "Visit now":"Out of business"}`;
     // Inject the complete H1 element into the DOM, inside the HEADER
     header.appendChild(h1);
     header.appendChild(p);
@@ -44,7 +43,7 @@ function populateHeader(jsBody){
 }
 
  /* STEP 10b: Assemble the showTopFlavors() function */
-function showTopFlavors(jsBody){
+function showTopFlavors(jsonBody){
 
     // STEP 10d: Loop through the topFlavors object
     let topFlavors = jsonBody.topFlavors;
@@ -55,6 +54,7 @@ function showTopFlavors(jsBody){
         let article = document.createElement("article");
         let h2 = document.createElement("h2");
         let p2 = document.createElement("p");
+        let p1 = document.createElement("p");
         let image = document.createElement("img");
         let list = document.createElement("ul");
     // STEP 10f: Set the textContent property for each of the above elements (except the UL), based on the JSON content
@@ -63,12 +63,12 @@ function showTopFlavors(jsBody){
         p2.textContent = `Type: ${topFlavors[i].type}`
         image.setAttribute("src", topFlavors[i].image);
     // STEP 10g: Build a loop for the ingredients array in the JSON
-        let incredients = topFlavors[i].ingredients
+        let ingredients = topFlavors[i].ingredients
         for(let j = 0; j<ingredients.length; j++){
             console.log(ingredients[j]);
             let item = document.createElement("li");
             item.textContent = ingredients[j];
-            list.appendChild(list);
+            list.appendChild(item);
             
             
         }
@@ -76,7 +76,7 @@ function showTopFlavors(jsBody){
         article.appendChild(h2);
         article.appendChild(p2);
         article.appendChild(p1);
-        article.appendChild(ul)
+        article.appendChild(list)
         article.appendChild(image);
         section.appendChild(article);
 
