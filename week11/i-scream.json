@@ -1,14 +1,43 @@
-// companyName, headOffice, established, active, topFlavors(name, calories, type, ingredients, image
 {
     "companyName": "JamarIce",
     "headOffice": "Nice, France",
     "established": 2002,
     "active": true,
-    "topFlavors": [{
-        "name": "Chocolate Mint",
-        "calories": 200,
-        "type": "ice cream",
-        "ingredients": ["Milk", "Sugar", "Cocao"]
-
-    }, {},]
+    "topFlavors": [
+        {
+            "name": "Chocolate Mint",
+            "calories": 200,
+            "type": "ice cream",
+            "ingredients": [
+                "Milk",
+                "Sugar",
+                "Cocao"
+            ],
+            "image": "https://jamwithmari.github.io/JS-class/week11/images/chocolate-mint.svg"
+        },
+        {
+            "name": "Peach Mango",
+            "calories": 500,
+            "type": "Milkshake type icrecream",
+            "ingredients": [
+                "Milk",
+                "Sugar",
+                "Peaches",
+                "Mangos"
+            ],
+            "image": "https://jamwithmari.github.io/JS-class/week11/images/peach-mango.svg"
+        },
+        {
+            "name": "Strawberry Sprinkle",
+            "calories": 200,
+            "type": "ice cream",
+            "ingredients": [
+                "Milk",
+                "Sugar",
+                "Strawberry pieces",
+                "Strawberry syrup"
+            ],
+            "image": "https://jamwithmari.github.io/JS-class/week11/images/strawberry-sprinkle.svg"
+        }
+    ]
 }
