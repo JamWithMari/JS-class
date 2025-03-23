@@ -1,88 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pizza Maker</title>
+    <link rel="stylesheet" href="./css/style.css">
     <script src="./js/script.js" defer></script>
-
 </head>
+
 <body>
     <h1>Pizza Builder</h1>
     <h2>What type of pizza are you looking for</h2>
     <form action="">
-        <label for="pizza-type"><h3>Choose your type of Pizza</h3></label>
+        <label for="pizza-type" id="type">
+            <h3>Choose your type of Pizza</h3>
+        </label>
         <select name="pizza-type" id="pizza-type">
             <option value="regular">Regular Pizza</option>
             <option value="party">Party Pizza</option>
-            <option value="stuffed">Stuffed Crust</option>
+            <option value="stuffed crust">Stuffed Crust</option>
         </select>
 
         <div class="size">
-            <input type="radio" name="pizza_size" id="small" value="small">
-            <label for="small">
-                Small pizza
-                <p>A 10 inch pizza with 6 slices</p>
-            </label>
-
-            <input type="radio" name="pizza_size" id="medium" value="medium">
-            <label for="medium">
-                Medium pizza
-                <p>A 12 inch pizza with 8 slices</p>
-            </label>
-
-            <input type="radio" name="pizza_size" id="large" value="large">
-            <label for="large">
-                Large pizza
-                <p>A 14 inch pizza with 10 slices</p>
-            </label>
-
-            <input type="radio" name="pizza_size" id="XL" value="XL">
-            <label for="XL">
-                Extra Large pizza
-                <p>A 16 inch pizza with 12 slices</p>
-            </label>
+            <div>
+                <input type="radio" name="pizza-size" id="small" value="small">
+                <label for="small">Small pizza</label>
+            </div>
+            <div>
+                <input type="radio" name="pizza-size" id="medium" value="medium">
+                <label for="medium">Medium pizza</label>
+            </div>
+            <div>
+                <input type="radio" name="pizza-size" id="large" value="large">
+                <label for="large">Large pizza</label>
+            </div>
+            <div>
+                <input type="radio" name="pizza-size" id="XL" value="XL">
+                <label for="XL">Extra Large pizza</label>
+            </div>
         </div>
 
         <div class="toppings">
-           <input type="checkbox" name="toppings" id="ground-beef" value="ground beef">
-           <label for="ground-beef">Ground beef</label> 
-
-           <input type="checkbox" name="toppings" id="grill-chicken" value="grill chicken">
-           <label for="ground-beef">Grilled Chicken</label> 
-
-           <input type="checkbox" name="toppings" id="pepperoni" value="grill chicken">
-           <label for="ground-beef">Pepperoni</label> 
-
-           <input type="checkbox" name="toppings" id="grill-chicken" value="grill chicken">
-           <label for="ground-beef">Grilled Chicken</label>
-
-           <input type="checkbox" name="toppings" id="olives" value="olives">
-           <label for="olives">Olives</label>
-
-           <input type="checkbox" name="toppings" id="pineapple" value="pineapple">
-           <label for="pineapple">Olives</label>
-
-           <input type="checkbox" name="toppings" id="red-onions" value="red onions">
-           <label for="pineapple">Red Onions</label>
-
-           <input type="checkbox" name="toppings" id="plant-roni" value="plant pepperoni">
-           <label for="plant-roni">Plant based pepperoni</label>
+            <div>
+                <input type="checkbox" name="toppings" id="ground-beef" value="ground beef">
+                <label for="ground-beef">Ground beef</label>
+            </div>
+            <div>
+                <input type="checkbox" name="toppings" id="grill-chicken" value="grill chicken">
+                <label for="grill-chicken">Grilled Chicken</label>
+            </div>
+            <div>
+                <input type="checkbox" name="toppings" id="pepperoni" value="pepperoni">
+                <label for="pepperoni">Pepperoni</label>
+            </div>
+            <div>
+                <input type="checkbox" name="toppings" id="olives" value="olives">
+                <label for="olives">Olives</label>
+            </div>
+            <div>
+                <input type="checkbox" name="toppings" id="pineapple" value="pineapple">
+                <label for="pineapple">Pineapple</label>
+            </div>
+            <div>
+                <input type="checkbox" name="toppings" id="red-onions" value="red onions">
+                <label for="red-onions">Red Onions</label>
+            </div>
+            <div>
+                <input type="checkbox" name="toppings" id="plant-roni" value="plant pepperoni">
+                <label for="plant-roni">Plant based pepperoni</label>
+            </div>
         </div>
 
         <div class="cheese">
-            <input type="radio" name="cheese" id="6-cheese" value="6 Cheese">
-            <label for="goat">6 Cheese</label>
-
-            <input type="radio" name="cheese" id="goat" value="Goat Cheese">
-            <label for="goat">Goat Cheese</label>
-
-            <input type="radio" name="cheese" id="dairy-free" value="Dairy free">
-            <label for="goat">Dairy free Cheese</label>
+            <div>
+                <input type="radio" name="cheese" id="6-cheese" value="6">
+                <label for="6-cheese">6 Cheese</label>
+            </div>
+            <div>
+                <input type="radio" name="cheese" id="goat" value="Goat">
+                <label for="goat">Goat Cheese</label>
+            </div>
+            <div>
+                <input type="radio" name="cheese" id="dairy-free" value="Dairy free">
+                <label for="dairy-free">Dairy free Cheese</label>
+            </div>
         </div>
+        <button type="button" id="btn">Click me please</button>
     </form>
 
-    <p id="final-pizza">
-    </p>
+    <p id="final-pizza"></p>
 </body>
+
 </html>
