@@ -48,7 +48,7 @@
                 "Sugar",
                 "Vanilla extract"
             ],
-            "image": "https://jamwithmari.github.io/JS-class/week11/images/vanilla.svg"
+            "image": "https://jamwithmari.github.io/JS-class/week11/images/vanilla.png"
         },
         {
             "name": "pistachio",
@@ -75,7 +75,7 @@
             "image": "https://jamwithmari.github.io/JS-class/week11/images/grape-sorbet.svg"
         },
         {
-            
+
         }
     ]
 }
