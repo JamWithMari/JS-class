@@ -14,7 +14,7 @@ body {
     width: 100vw;
     flex-direction: column;
 }
-Increasing the size of the 
+/* Increasing the size of the  text at the end of the creation proccess */
 #final-pizza {
     font-size: 1.3em;
     text-align: center;

@@ -1,5 +1,5 @@
-//The first thing i want to do is make a function that will deal with the checkboxes
 let output = document.getElementById("final-pizza");
+//Declaring the variables that will be used in the build function and the valid function so declaring them here for a global scoope
 let pizzaSize;
 let pizzaCheese;
 let pizzaType;
@@ -22,19 +22,14 @@ class Pizza {
         this.cheese = cheese;
     }
 }
-//Build pizza makes
 
+//Function for building the pizza
 function build() {
     console.log("the pizza is being built");
     // Grabbing the values from the form
     pizzaSize = document.querySelector('input[name="pizza-size"]:checked');
     pizzaCheese = document.querySelector('input[name="cheese"]:checked');
     pizzaType = document.getElementById('pizza-type');
-
-    // Debugging logs
-    console.log("Pizza Size:", pizzaSize ? pizzaSize.value : "Not selected");
-    console.log("Pizza Cheese:", pizzaCheese ? pizzaCheese.value : "Not selected");
-    console.log("Pizza Type:", pizzaType ? pizzaType.value : "Not selected");
 
     // Calling the valid function before we make the pizza
     if (valid()) {
@@ -54,9 +49,11 @@ function chooseTopping(event) {
             checked.push(element.value);
         }
     }
+    //if more than 3 toppings are selected then we will alert the user that they can only have 3 toppings
     if (checked.length > 3) {
         alert("You can only have 3 toppings");
         event.target.checked = false;
+        //since we are only allowing 3 toppings we will remove the last selected topping after the alert was given
         checked.pop();
 
     }
@@ -65,21 +62,22 @@ function valid() {
     // Resetting output each time the function is run
     output.textContent = "";
     if (!pizzaSize) {
-        output.textContent += "Please select a size\n";
+        output.textContent += "Please select a size ";
     }
     if (!pizzaCheese) {
-        output.textContent += "Please select a cheese\n";
+        output.textContent += "Please select a cheese ";
     }
     if (!pizzaType) {
-        output.textContent += "Please select a type\n";
+        output.textContent += "Please select a type ";
     }
     if (checked.length == 0) {
-        output.textContent += "Please select a topping\n";
+        output.textContent += "Please select a topping ";
     }
-    // I want to tell people 
+    // I want to tell people which ones they have missed that's why the return is at the end instead of inside each function
     if (!pizzaSize || !pizzaCheese || !pizzaType || checked.length == 0) {
         return false;
     } else {
+        //if none of them are null then valid returns true so we can then build the pizza
         return true;
     }
 }
