@@ -38,6 +38,44 @@
                 "Strawberry syrup"
             ],
             "image": "https://jamwithmari.github.io/JS-class/week11/images/strawberry-sprinkle.svg"
+        },
+        {
+            "name": "Vanilla",
+            "calories": 100,
+            "type": "ice cream",
+            "ingredients": [
+                "Milk",
+                "Sugar",
+                "Vanilla extract"
+            ],
+            "image": "https://jamwithmari.github.io/JS-class/week11/images/vanilla.svg"
+        },
+        {
+            "name": "pistachio",
+            "calories": 278,
+            "type": "ice cream",
+            "ingredients": [
+                "Milk",
+                "Sugar",
+                "Pistachio nuts", 
+                "Heavy cream"
+            ],
+            "image": "https://jamwithmari.github.io/JS-class/week11/images/pistachio.svg"
+        },
+        {
+            "name": "grape",
+            "calories": 134,
+            "type": "sorbet",
+            "ingredients": [
+                "Frozen grapes",
+                "Sugar",
+                "Water",
+                "Lemong juice"
+            ],
+            "image": "https://jamwithmari.github.io/JS-class/week11/images/grape-sorbet.svg"
+        },
+        {
+            
         }
     ]
 }
