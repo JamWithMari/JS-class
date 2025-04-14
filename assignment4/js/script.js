@@ -27,6 +27,9 @@ function displayResults(data, type) {
         return;
     }
 
+    //resetting the results container
+    resultContainer.innerHTML = '';
+
     const results = data.results[`${type}matches`].artist ||data.results[`${type}matches`].album;
 
     if (!results || results.length === 0) {
@@ -42,14 +45,12 @@ function displayResults(data, type) {
             case 'album':
                 itemElement.innerHTML = `
                     <h5>${item.name}</h5>
-                    <p>Artist: ${item.artist.name}</p>
                     <img src="${item.image[2]['#text']}" alt="${item.name}" />
                 `;
                 break;
             case 'artist':
                 itemElement.innerHTML = `
                     <h5>${item.name}</h5>
-                    <p>Listeners: ${item.listeners}</p>
                     <img src="${item.image[2]['#text']}" alt="${item.name}" />
                 `;
                 break;
