@@ -1,5 +1,4 @@
-header = document.querySelector('h1');
-header.textContent = "Hello man";
+let header = document.querySelector('h1');
 const userInput = document.querySelector('#user-input');
 const submitBtn = document.querySelector('#submit-button');
 const tableBody = document.querySelector('#table-body');

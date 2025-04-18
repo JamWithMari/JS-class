@@ -38,13 +38,15 @@ function displayResults(json) {
     };
     // STEP 6: Create the variable articles to capture the articles from the JSON object
     let articles = json.response.docs;
-
+    //when displaying the data if there's no results to the articles array then we print the message no results returned 
     if (articles.length === 0) {
         const para = document.createElement('p');
         para.textContent = 'No results returned.'
         section.appendChild(para);
     } else {
+        //could use a for of looop intead for(let article of articles){}
         for (let i = 0; i < articles.length; i++) {
+            //we creating an article tag and the elements associated with it
             const article = document.createElement('article');
             const heading = document.createElement('h2');
             const link = document.createElement('a');
@@ -57,7 +59,7 @@ function displayResults(json) {
             link.href = current.web_url;
             link.textContent = current.headline.main;
             para1.textContent = current.snippet;
-
+            //if there's images grab it and displa it otherwise just don't
             if (current.multimedia.length > 0) {
                 img.src = 'https://www.nytimes.com/' + current.multimedia[0].url;
                 img.alt = current.headline.main;

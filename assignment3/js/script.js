@@ -27,6 +27,7 @@ class Pizza {
 function build() {
     console.log("the pizza is being built");
     // Grabbing the values from the form
+    //for radio buttons it's pretty easy you just grab the checked input with said name checkboxes are a bit more annoying
     pizzaSize = document.querySelector('input[name="pizza-size"]:checked');
     pizzaCheese = document.querySelector('input[name="cheese"]:checked');
     pizzaType = document.getElementById('pizza-type');
